@@ -1,4 +1,4 @@
-# 💼 Ayenew Girmay | Professional Portfolio
+# 💼 Ayenew Girmay | Portfolio
 
 Welcome to my **personal portfolio website** — a blend of my journey from hands-on electrical work to a passion for software engineering. This portfolio highlights my **skills**, **experience**, and **educational background**, and demonstrates my commitment to solving real-world problems through **technology and innovation**.
 
@@ -31,8 +31,6 @@ I am continuously learning and applying my skills to build user-friendly and fun
 
 - ✅ **B.Sc. in Electrical and Computer Engineering**, Dilla University  
 - ✅ **Software Engineering Student**, PLP Academy  
-- 📄 [Download My CV](cv.pdf)
-
 ---
 
 ## 🧰 Experience
@@ -71,7 +69,6 @@ If you'd like to connect or collaborate, feel free to reach out:
 
 - 📧 Email: [ayenewgirmay21@gmail.com](mailto:ayenewgirmay21@gmail.com)  
 - 💼 LinkedIn: [linkedin.com/in/ayenew-girmay-491057320](http://www.linkedin.com/in/ayenew-girmay-491057320)  
-- 🌍 Portfolio Live: *(Add your live URL here)*  
 
 ---
 
