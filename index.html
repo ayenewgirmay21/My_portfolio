@@ -1,82 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayenew Girmay| Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayenew Girmay - Portfolio</title>
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #4CAF50;
+      color: white;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 15px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+      border: 4px solid white;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4CAF50;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    #about p {
+  max-width: 750px;
+  margin: auto;
+  text-align: justify;      /* align both left and right */
+  text-justify: inter-word; /* adjust word spacing */
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 20px;
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+
+    /* Social icons */
+    .social-links {
+      margin: 15px 0;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 12px;
+      font-size: 1.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #4CAF50;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Header with Profile Photo -->
   <header>
     <h1>Ayenew Girmay</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <p>Electrical Technician | Web Development Enthusiast</p>
+    <!-- Profile photo from project folder -->
+    <img src="images/profile.jpg" alt="My Profile Picture" class="profile-img">
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I have hands-on experience as electrician and a strong technical foundation in electrical systems, my practical knowledge and problem-solving skills to an engineering role within those years.Throughout my career as an electrician, I have worked on residential, commercial, and industrial projects—installing and troubleshooting wiring systems, interpreting blueprints and technical drawings, and ensuring full compliance with safety and electrical codes. I have also collaborated closely with engineers on project planning and execution, which sparked my passion to transition into a more design- and innovation-focused engineering role. I am currently have completed my degree in Electrical and Computer Engineering, where I’ve expanded my knowledge in circuit
-analysis.But currently I'm a passionate software enthusiast driven by problem-solving and learning new technologies. I enjoy building things that make life easier.</p>
-    </section>
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+<p>Hello! My name is <strong>Ayenew Girmay</strong>. I’m an experienced 
+<em>Electrical Technician</em> and I’m also passionate about 
+<strong>Web Development, AI, and Open Source</strong>. 
+I enjoy solving real-world problems and creating scalable solutions 
+through technology. In my free time, I like learning new skills, 
+exploring tech trends, and building personal projects.
+And also I have hands-on experience as electrician and a strong technical foundation in electrical systems, my practical knowledge and problem-solving skills to an engineering role within those years.
+Throughout my career as an electrician, I have worked on residential, commercial, and industrial projects—installing and troubleshooting wiring systems, interpreting blueprints and technical drawings, and ensuring full compliance with safety and electrical codes. I have also collaborated closely with engineers on project planning and execution, which sparked my passion to transition into a more design- and innovation-focused engineering role. I am currently have completed my degree in Electrical and Computer Engineering, where I’ve expanded my knowledge in circuit analysis.But currently I'm a passionate software enthusiast driven by problem-solving and learning new technologies. I enjoy building things that make life easier.
+</p>
+  </section>
 
-    <section id="skills">
-      <h2>Programming Languages</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Java</li>
-      </ul>
-    </section>
+  <!-- Experience Section -->
+  <section id="Experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>Assistance Electrician and Boiler Operator (Jun 30/2020 - May 01/2021) – MA General Trading</li>
+      <li>Assistance Electrician and Boiler Operator (May 01/2021 - Feb 04/2022) – ANA Soap Factory</li>
+      <li>General Technician (Feb 04/2022 - Dec 15/2022) – ROCSPACES</li>
+      <li>Electrical Technician (Dec 23/2022 - Jun 22/2025) – Grand Palace of Ethiopia Unity Park</li>
+    </ul>
+  </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <p>✓B.Sc. in Electrical and Computer Engineering, Dilla University<br> <u>✓ Student of Software Engineering in PLP Academy</u></p>
-      <a href="cv.pdf" download>📄 Download My CV</a>
-    </section>
-<section id="Experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>Assistance Electrician and Boiler operator from Jun 30/2020 to May 01/2021 (MA GENERAL TRADING))</li>
-        <li>Assistance Electrician and Boiler operator from May 01/2021 to Feb 04/2022(ANA SOAP FACTORY)</li>
-        <li>General Technician from Feb 04/2022 to Dec 15/2022(ROCSPACES)</li>
-        <li>Electrical Technician from Dec 23/2022 to Jun 22/2025(GRAND PALACE OF ETHIOPIA UNITY PARK)</li>
-      </ul>
-      <p></p>
-    
-    </section>
-    <section id="interests">
-      <h2>Interests</h2>
-      <p>I’m excited about AI, Web Development, and Open Source. I'm interested in solving real-world problems with scalable software.</p>
-    </section>
+  <!-- Interests Section -->
+  <section id="interests">
+    <h2>Interests</h2>
+    <p>I’m excited about AI, Web Development, and Open Source. I'm interested in solving real-world problems with scalable software.</p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-<div id="contact" class="contact">
-  <div class="header">
-    <h1>Around the web</h1>
-    <p>Don't be a stranger</p>
-  </div>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
+    <h2>Around the Web</h2>
+    <p>Don’t be a stranger</p>
+
+    <!-- Social Media Icons -->
+    <div class="social-links">
+      <a href="http://www.linkedin.com/in/ayenew-girmay-491057320" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/ayenewgirmay21" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/murael21" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="ayenewgirmay21@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
     <p>&copy; 2025 Ayenew Girmay. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
