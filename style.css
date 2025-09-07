@@ -1,59 +1,177 @@
+/* ========== GLOBAL STYLES ========== */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4f4;
+  background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
+/* ========== HEADER ========== */
 header {
-  background: #333;
-  color: #fff;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+  background: #4CAF50;
+  color: white;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  border: 4px solid white;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 nav ul {
   list-style: none;
+  margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+  margin: 0;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-form input, form textarea, form button {
+nav ul li a {
   display: block;
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
 }
 
-form button {
-  background: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+nav ul li a:hover {
+  background: #4CAF50;
+  color: white;
+  border-radius: 4px;
 }
 
-footer {
+nav ul li a.active {
+  background: #4CAF50;
+  border-radius: 4px;
+}
+
+/* ========== SECTIONS ========== */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #4CAF50;
   text-align: center;
+  margin-bottom: 15px;
+}
+
+/* About text aligned equally */
+#about p {
+  max-width: 750px;
+  margin: auto;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* Experience list */
+ul {
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+  padding-left: 20px;
+}
+
+/* ========== FORM STYLES ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input,
+textarea,
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  margin-top: 30px;
   padding: 20px;
   background: #333;
-  color: #fff;
+  color: white;
+  text-align: center;
+}
+
+.social-links {
+  margin: 15px 0;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 12px;
+  font-size: 1.9rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4CAF50;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  #about p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
 }
