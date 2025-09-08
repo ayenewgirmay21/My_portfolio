@@ -6,6 +6,65 @@
   <title>Ayenew Girmay - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .close {
+      float: right;
+      font-size: 22px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .close:hover {
+      color: red;
+    }
+
+    /* Basic styling for form */
+    #contact form input,
+    #contact form textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    #contact form button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #contact form button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
@@ -84,13 +143,22 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form id="contactForm">
+    <form id="contact-form" action="https://formspree.io/f/mqadwwla" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
+
+  <!-- Thank You Modal -->
+  <div id="thankYouModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>✅ Thank you!</h3>
+      <p>Your message has been sent successfully.</p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -106,27 +174,34 @@
   </footer>
 
   <script>
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-      };
+    const form = document.getElementById("contact-form");
+    const modal = document.getElementById("thankYouModal");
+    const closeBtn = document.querySelector(".close");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const data = new FormData(form);
+
       try {
-        const res = await fetch('http://localhost:3000/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
         });
-        const result = await res.text();
-        alert(result);
-        form.reset();
-      } catch (err) {
-        alert('Error sending message');
+
+        if (response.ok) {
+          modal.style.display = "block";
+          form.reset();
+        } else {
+          alert("❌ Oops! Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        alert("❌ Network error. Please try again.");
       }
     });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
   </script>
 </body>
 </html>
